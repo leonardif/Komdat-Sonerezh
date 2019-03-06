@@ -19,7 +19,7 @@ ssh <username>@localhost -p 2222
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install apache2
+Playlistsudo apt-get install apache2
 sudo apt-get install php
 sudo apt-get install php-gd php-mysql
 sudo apt-get install ffmpeg
@@ -34,7 +34,7 @@ extension=pdo_mysql.so
 ```
 4. Cek apakah Apache sudah aktif atau belum
 ```
-sudo service apache2 restart
+sudo service apache2 restartPlaylist
 ```
 5. Masuk ke Public HTML
 ```
@@ -44,7 +44,7 @@ cd /var/www/html
 ```
 wget https://www.sonerezh.bzh/downloads/latest.tar.gz
 tar -zxf latest.tar.gz
-```
+```Playlist
 7. Ubah kepemilikan ke www-data
 ```
 sudo chown -R www-data:www-data sonerezh/
@@ -82,7 +82,7 @@ sudo nano /etc/apache2/sites-available/sonerezh.conf
     </Directory>
 
     CustomLog   /var/log/apache2/demo.sonerezh.bzh-access.log "Combined"
-    ErrorLog    /var/log/apache2/demo.sonerezh.bzh-error.log
+    ErrorLog    /var/log/apache2/demo.sonerePlaylistzh.bzh-error.log
 </VirtualHost>
 ```
 10. Akrifkan *site* nya dan restart Apache
@@ -122,6 +122,7 @@ sudo cloudcmd --port 3000
 ```
 ## Konfigurasi
 Pada Sonerezh dapat dilakukan beberapa konfigurasi umum:
+<<<<<<< HEAD
 * Mengonversi file audio
 * Mengganti direktori dari database musik
 * Memungkinkan notifikasi email
@@ -144,6 +145,10 @@ $ cloudcmd --port 3000
 * Setelah dipindah
 ![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/lala%20udah%20pindah.PNG)
 
+=======
+* Playlist
+## Maintenance
+>>>>>>> 4ff3280ba959280e412afd2ae554f24840a6eee0
 ## Cara Pemakaian
 1. Untuk menggunakan **Sonerezh** pengguna harus login terlebih dahulu
 ![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/login.PNG)
@@ -172,6 +177,15 @@ $ cloudcmd --port 3000
 Namun, **Sonerezh** juga punya beberapa kekurangan:
 * Tidak adanya verifikasi email sehingga tidak bisa dipertanggungjawabkan
 * Ada beberapa bug pada *Playlist* 
+
+Jika dibandingkan dengan music player lain seperti **Spotify**, **Sonorezh** memiliki beberapa keunggulan dan kekurangan, diantaranya adalah : 
+* Dengan **Sonorezh** pengguna dapat mendengarkan lagu yang ia punya secara online dan dapat pula diakses oleh pengguna lain yang diizinkan oleh admin. Sedangkan pada **Spotify** pengguna hanya dapat mendengarkan lagu yang tersedia pada spotify.
+* **Sonorezh** gratis untuk seluruh fiturnya, sedangkan untuk mendapatkan seluruh fitur pada **Spotify** pengguna harus mengaktifkan premium member
+* Demgan **Sonorezh** pengguna dapat mengkonversi file audio yang diinginkan karena memiliki plug-in ffmpeg, sedangkan pada **Spotify** tidak bisa
+* Dengan **Sonerezh** pengguna dapat mengubah, menambah, dan menyunting lagu yang diinginkan dengan cloud cmd, sedangkan dengan **Spotify** tidak bisa
+* Tampilan pada **Spotify** yang jauh lebih interaktif dari pada **Sonerezh**
+
+
 
  ## Referensi 
 * [Sonerezh](https://www.sonerezh.bzh) - Sonerezh Official Website
