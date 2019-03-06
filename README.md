@@ -10,20 +10,23 @@
 - Php
 - MySQL
 - Ffmpeg
+
 ## Proses Instalasi
 1. Akses *Virtual Machine* dengan ssh
 ```
 ssh <username>@localhost -p 2222
 ``` 
+
 2. Pastikan sistem *Up-To-Date*, lalu install seluruh kebutuhan sistem (*Apache2, php, MySQL, dan ffmpeg*)
 ```
 sudo apt-get update
 sudo apt-get upgrade
-Playlistsudo apt-get install apache2
+sudo apt-get install apache2
 sudo apt-get install php
 sudo apt-get install php-gd php-mysql
 sudo apt-get install ffmpeg
 ```
+
 3. Aktifkan ekstensi PHP sudah diaktifkan (sudah di uncomment dan ada .so nya)
 ```
 sudo nano /etc/php/7.2/apache2/php.ini
@@ -32,23 +35,28 @@ extension=gd.so
 extension=gd2.so
 extension=pdo_mysql.so
 ```
+
 4. Cek apakah Apache sudah aktif atau belum
 ```
-sudo service apache2 restartPlaylist
+sudo service apache2 restart
 ```
+
 5. Masuk ke Public HTML
 ```
 cd /var/www/html
 ```
+
 6. Download **Sonerezh**
 ```
 wget https://www.sonerezh.bzh/downloads/latest.tar.gz
 tar -zxf latest.tar.gz
 ```
+
 7. Ubah kepemilikan ke www-data
 ```
 sudo chown -R www-data:www-data sonerezh/
 ```
+
 8. Buat database baru untuk **Sonerezh**
 ```
 mysql -u root -p
@@ -57,6 +65,8 @@ mysql -u root -p
 	flush privileges;
 	exit;
 ```
+<new password> diisi oleh password dari `mysql`
+	
 9. Setting Virtual Host pada Apache
 ```
 sudo a2enmod rewrite
@@ -82,10 +92,11 @@ sudo nano /etc/apache2/sites-available/sonerezh.conf
     </Directory>
 
     CustomLog   /var/log/apache2/demo.sonerezh.bzh-access.log "Combined"
-    ErrorLog    /var/log/apache2/demo.sonerePlaylistzh.bzh-error.log
+    ErrorLog    /var/log/apache2/demo.sonerezh.bzh-error.log
 </VirtualHost>
 ```
-10. Akrifkan *site* nya dan restart Apache
+
+10. Aktifkan *site* nya dan restart Apache
 ```
 sudo a2ensite sonerezh
 sudo service apache2 restart
@@ -106,7 +117,7 @@ sudo service apache2 restart
 Setelah mengklik next, akan muncul tampilan untuk login
 ![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/login.PNG)
 
-12. Install sofware cloud commander yang dibutuhkan untuk managemen file
+12. Install software cloud commander yang dibutuhkan untuk managemen file
 ```
 cd ~
 sudo apt install curl
@@ -116,13 +127,14 @@ sudo apt install nodejs
 sudo apt install build-essential
 sudo npm i cloudcmd -g
 ```
-13. Tambahkan 1 port host dan guest pada virtual Machine dengan port 3000 dan coba jalankan
+
+13. Tambahkan 1 *port host* dan *guest* pada *Virtual Machine* dengan *port* 3000 dan coba jalankan
 ```
 sudo cloudcmd --port 3000
 ```
+
 ## Konfigurasi
 Pada Sonerezh dapat dilakukan beberapa konfigurasi umum:
-<<<<<<< HEAD
 * Mengonversi file audio
 * Mengganti direktori dari database musik
 * Memungkinkan notifikasi email
@@ -157,7 +169,7 @@ $ cloudcmd --port 3000
 5. Menu **Playlist** menampilkan daftar *playlist* yang dibuat oleh pengguna. Pengguna dapat menambahkan lagu pada
 *playlist* yang sudah ada ataupun membuat *playlist* baru
 ![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/playlist.PNG)
-6. Menu **Database Update** digunakan untuk memperbaharui database
+6. Menu **Database Update** digunakan untuk memperbaharui *database*.
 7. Menu **Settings** digunakan untuk mengatur aplikasi **Sonerezh**.
 8. Menu **User** dapat digunakan untuk mengatur daftar user yang dapat mengakses lagu pengguna.
 
@@ -174,10 +186,10 @@ Namun, **Sonerezh** juga punya beberapa kekurangan:
 * Tidak adanya verifikasi email sehingga tidak bisa dipertanggungjawabkan
 * Ada beberapa bug pada *Playlist* 
 
-Jika dibandingkan dengan music player lain seperti **Spotify**, **Sonorezh** memiliki beberapa keunggulan dan kekurangan, diantaranya adalah : 
-* Dengan **Sonorezh** pengguna dapat mendengarkan lagu yang ia punya secara online dan dapat pula diakses oleh pengguna lain yang diizinkan oleh admin. Sedangkan pada **Spotify** pengguna hanya dapat mendengarkan lagu yang tersedia pada spotify.
-* **Sonorezh** gratis untuk seluruh fiturnya, sedangkan untuk mendapatkan seluruh fitur pada **Spotify** pengguna harus mengaktifkan premium member
-* Demgan **Sonorezh** pengguna dapat mengkonversi file audio yang diinginkan karena memiliki plug-in ffmpeg, sedangkan pada **Spotify** tidak bisa
+Jika dibandingkan dengan music player lain seperti **Spotify**, **Sonerezh** memiliki beberapa keunggulan dan kekurangan, diantaranya adalah : 
+* Dengan **Sonerezh** pengguna dapat mendengarkan lagu yang ia punya secara online dan dapat pula diakses oleh pengguna lain yang diizinkan oleh admin. Sedangkan pada **Spotify** pengguna hanya dapat mendengarkan lagu yang tersedia pada spotify.
+* **Sonerezh** gratis untuk seluruh fiturnya, sedangkan untuk mendapatkan seluruh fitur pada **Spotify** pengguna harus mengaktifkan premium member
+* Demgan **Sonerezh** pengguna dapat mengkonversi file audio yang diinginkan karena memiliki plug-in ffmpeg, sedangkan pada **Spotify** tidak bisa
 * Dengan **Sonerezh** pengguna dapat mengubah, menambah, dan menyunting lagu yang diinginkan dengan cloud cmd, sedangkan dengan **Spotify** tidak bisa
 * Tampilan pada **Spotify** yang jauh lebih interaktif dari pada **Sonerezh**
 
