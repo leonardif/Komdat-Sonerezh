@@ -92,16 +92,19 @@ sudo service apache2 restart
 ```
 
 11. Lanjutkan instalasi dengan mengunjungi `<host>:<port>/sonerezh` dengan browser. Akan muncul tampilan seperti berikut
-![](sonerezh%201.PNG)
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/login.PNG)
 
 * Cek kembali semua *requirement* yang diperlukan
-![](sonerezh%202.PNG)
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/sonerezh%202.PNG)
 
 * Isi konfigurasi database
-![](sonerezh%203.PNG)
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/sonerezh%203.PNG)
 
 * Isi data diri
-![](sonerezh%204.PNG)
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/sonerezh%204.PNG)
+
+Setelah mengklik next, akan muncul tampilan untuk login
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/login.PNG)
 
 12. Install sofware cloud commander yang dibutuhkan untuk managemen file
 ```
