@@ -90,9 +90,18 @@ sudo nano /etc/apache2/sites-available/sonerezh.conf
 sudo a2ensite sonerezh
 sudo service apache2 restart
 ```
-11. Lanjutkan instalasi dengan mengunjungi 127.0.0.1:8888/sonerezh dengan browser
 
-**belom diisi langkahnya soalnya blom bisa gua install**
+11. Lanjutkan instalasi dengan mengunjungi `<host>:<port>/sonerezh` dengan browser. Akan muncul tampilan seperti berikut
+![](sonerezh%201.PNG)
+
+* Cek kembali semua *requirement* yang diperlukan
+![](sonerezh%202.PNG)
+
+* Isi konfigurasi database
+![](sonerezh%203.PNG)
+
+* Isi data diri
+![](sonerezh%204.PNG)
 
 12. Install sofware cloud commander yang dibutuhkan untuk managemen file
 ```
@@ -109,6 +118,8 @@ sudo npm i cloudcmd -g
 sudo cloudcmd --port 3000
 ```
 ## Konfigurasi
+Pada Sonerezh dapat dilakukan beberapa konfigurasi umum:
+* 
 ## Maintenance
 ## Cara Pemakaian
 1. Untuk menggunakan **Sonerezh** pengguna harus login terlebih dahulu
@@ -121,7 +132,22 @@ sudo cloudcmd --port 3000
 8. Menu **User** dapat digunakan untuk mengatur daftar user yang dapat mengakses lagu pengguna. Pengguna dapat menambahkan, menghapus, dan mengganti role dari para user sesuai keinginan.
 9. Management Lagu
  ## Pembahasan
+ **Sonerezh** dibangun menggunakan bahasa pemrograman `PHP` dengan framework `CakePHP` dan database dari `MySql`. Aplikasi ini adalah aplikasi pemutar lagu secara online dari koleksi pribadi yang sudah dimasukan ke dalam database.
+ 
+ **Sonerezh** punya beberapa kelebihan:
+ * Ringan saat digunakan
+ * Memiliki tingkat keamanan yang cukup terjamin
+ * Memiliki fitur konversi format lagu
+ * Memiliki fitur pencarian yang lengkap
+
+Namun, **Sonerezh** juga punya beberapa kekurangan:
+* Tidak adanya verifikasi email sehingga tidak bisa dipertanggungjawabkan
+* Ada beberapa bug pada *Playlist* 
+
  ## Referensi 
+* [Sonerezh](https://www.sonerezh.bzh) - Sonerezh Official Website
+* [Sonerezh Github](https://github.com/sonerezh/sonerezh) - Sonerezh Github Documentation
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTczNTUxNjE4LDE1OTg1OTEwMDIsNjIzNj
 QwMDQ3XX0=
