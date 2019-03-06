@@ -92,7 +92,7 @@ sudo service apache2 restart
 ```
 
 11. Lanjutkan instalasi dengan mengunjungi `<host>:<port>/sonerezh` dengan browser. Akan muncul tampilan seperti berikut
-![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/login.PNG)
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/sonerezh%201.PNG)
 
 * Cek kembali semua *requirement* yang diperlukan
 ![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/sonerezh%202.PNG)
@@ -122,18 +122,44 @@ sudo cloudcmd --port 3000
 ```
 ## Konfigurasi
 Pada Sonerezh dapat dilakukan beberapa konfigurasi umum:
-* 
-## Maintenance
+* Mengonversi file audio
+* Mengganti direktori dari database musik
+* Memungkinkan notifikasi email
+* Mengatur manajemen database
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/setting.PNG)
+
+## Maintainance Lagu
+1. Pada Sonerezh, kita dapat memasukan lagu menggunakan 
+```
+$ cloudcmd --port 3000
+```
+2. Akan muncul tampilan seperti berikut
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/cloudcmd.PNG)
+
+3. Untuk memasukan lagu ke dalam database lagu, masukan lagu ke direktori yang telah di set sebelumnya
+* Mengunduh lagu
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/download%20lagu.PNG)
+* Sebelum dipindah
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/lala%20belom%20pindah.PNG)
+* Setelah dipindah
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/lala%20udah%20pindah.PNG)
+
 ## Cara Pemakaian
 1. Untuk menggunakan **Sonerezh** pengguna harus login terlebih dahulu
-2. Setelah login, pengguna akan diarahkan ke halaman utama. Dalam halaman utama terdapat pemutar musik dan daftar lagu beserta data lagu (judul, penyanyi, album, durasi) yang sudah pengguna masukkan pada database **Sonerezh**
-3. Menu **Artist** dapat digunakan untuk mengurutkan dan mengelompokkan lagu berdasarkan data penyanyi
-4. Menu **Album** dapat digunakan untuk mengurutkan dan mengelompokkan lagu berdasarkan data album
-5. Menu **Playlist** dapat digunakan untuk melihat daftar *playlist* yang dibuat oleh pengguna. Pengguna dapat menambahkan lagu pada *playlist* yang sudah tersedia, ataupun dapat membuat *playlist* baru
-6. Menu **Database Update** dapat digunakan untuk me-*refresh* database agar membaca lagu yang baru saja dimasukkan ke dalam database
-7. Menu **Settings** dapat digunakan untuk mengkonfigurasi aplikasi **Sonerezh** sesuai keinginan.
-8. Menu **User** dapat digunakan untuk mengatur daftar user yang dapat mengakses lagu pengguna. Pengguna dapat menambahkan, menghapus, dan mengganti role dari para user sesuai keinginan.
-9. Management Lagu
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/login.PNG)
+2. Setelah login, pengguna akan diarahkan ke halaman utama.
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/home.PNG)
+3. Menu **Artist** menampilkan lagu berdasarkan artis
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/artist.PNG)
+4. Menu **Album** menampilkan lagu berdasarkan album
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/albums.PNG)
+5. Menu **Playlist** menampilkan daftar *playlist* yang dibuat oleh pengguna. Pengguna dapat menambahkan lagu pada
+*playlist* yang sudah ada ataupun membuat *playlist* baru
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/playlist.PNG)
+6. Menu **Database Update** digunakan untuk memperbaharui database
+7. Menu **Settings** digunakan untuk mengatur aplikasi **Sonerezh**.
+8. Menu **User** dapat digunakan untuk mengatur daftar user yang dapat mengakses lagu pengguna.
+
  ## Pembahasan
  **Sonerezh** dibangun menggunakan bahasa pemrograman `PHP` dengan framework `CakePHP` dan database dari `MySql`. Aplikasi ini adalah aplikasi pemutar lagu secara online dari koleksi pribadi yang sudah dimasukan ke dalam database.
  
