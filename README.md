@@ -1,3 +1,4 @@
+![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/judul.PNG)
 # Sonerezh
 
 [Sekilas Tentang](#sekilas-tentang) | [Instalasi](#instalasi) | [Konfigurasi](#konfigurasi) | [Maintainance Lagu](#maintanance-lagu) | [Cara Pemakaian](#cara-pemakaian) | [Pembahasan](#pembahasan) | [Referensi](#referensi)
