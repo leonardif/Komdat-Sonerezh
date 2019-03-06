@@ -1,9 +1,14 @@
-﻿# Sonerezh
+# Sonerezh
+
+[Sekilas Tentang](#sekilas-tentang) | [Instalasi](#instalasi) | [Konfigurasi](#konfigurasi) | [Maintainance Lagu](#maintanance-lagu) | [Cara Pemakaian](#cara-pemakaian) | [Pembahasan](#pembahasan) | [Referensi](#referensi)
 
 ## Sekilas Tentang
+[^back to top](#sonerezh)
+
 **Sonerezh** merupakan sebuah aplikasi pemutar musik pribadi berbasis web yang unik. **Sonerezh** dapat mengunggah musik yang diinginkan dari web player dan memasukkannya ke database sehingga dapat didengarkan kapanpun, dimanapun, dan oleh siapapun yang diizinkan untuk mendengarkan koleksi kita.
 
 ## Instalasi
+[^back to top](#sonerezh)
 ### Kebutuhan sistem :
 - Unix, Linux, atau Windows
 - Apache2
@@ -44,7 +49,7 @@ cd /var/www/html
 ```
 wget https://www.sonerezh.bzh/downloads/latest.tar.gz
 tar -zxf latest.tar.gz
-```Playlist
+```
 7. Ubah kepemilikan ke www-data
 ```
 sudo chown -R www-data:www-data sonerezh/
@@ -130,6 +135,7 @@ Pada Sonerezh dapat dilakukan beberapa konfigurasi umum:
 ![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/setting.PNG)
 
 ## Maintainance Lagu
+[^back to top](#sonerezh)
 1. Pada Sonerezh, kita dapat memasukan lagu menggunakan 
 ```
 $ cloudcmd --port 3000
@@ -146,6 +152,7 @@ $ cloudcmd --port 3000
 ![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/lala%20udah%20pindah.PNG)
 
 ## Cara Pemakaian
+[^back to top](#sonerezh)
 1. Untuk menggunakan **Sonerezh** pengguna harus login terlebih dahulu
 ![](https://github.com/leonardif/Komdat-Sonerezh/blob/master/Dokumentasi/login.PNG)
 2. Setelah login, pengguna akan diarahkan ke halaman utama.
@@ -162,6 +169,8 @@ $ cloudcmd --port 3000
 8. Menu **User** dapat digunakan untuk mengatur daftar user yang dapat mengakses lagu pengguna.
 
  ## Pembahasan
+ [^back to top](#sonerezh)
+ 
  **Sonerezh** dibangun menggunakan bahasa pemrograman `PHP` dengan framework `CakePHP` dan database dari `MySql`. Aplikasi ini adalah aplikasi pemutar lagu secara online dari koleksi pribadi yang sudah dimasukan ke dalam database.
  
  **Sonerezh** punya beberapa kelebihan:
@@ -181,9 +190,8 @@ Jika dibandingkan dengan music player lain seperti **Spotify**, **Sonorezh** mem
 * Dengan **Sonerezh** pengguna dapat mengubah, menambah, dan menyunting lagu yang diinginkan dengan cloud cmd, sedangkan dengan **Spotify** tidak bisa
 * Tampilan pada **Spotify** yang jauh lebih interaktif dari pada **Sonerezh**
 
-
-
  ## Referensi 
+ [^back to top](#sonerezh)
 * [Sonerezh](https://www.sonerezh.bzh) - Sonerezh Official Website
 * [Sonerezh Github](https://github.com/sonerezh/sonerezh) - Sonerezh Github Documentation
 
